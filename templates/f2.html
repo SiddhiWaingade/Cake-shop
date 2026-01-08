@@ -1,0 +1,155 @@
+
+           
+ {% load static %}
+   
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content=
+            "width=device-width, initial-scale=1">
+<script>
+
+    function validateForm() {
+      var ratingOptions = document.getElementsByName('rating');
+      var selectedOption = false;
+
+      for (var i = 0; i < ratingOptions.length; i++) {
+        if (ratingOptions[i].checked) {
+          selectedOption = true;
+          break;
+        }
+      }
+
+      if (!selectedOption) {
+        alert('Please select a option');
+        return false; 
+      }
+
+      
+      return true;
+    }
+
+  </script>
+</head>
+
+<style>
+        body {
+              background-image:url("{% static 'images/image6.jpg' %}");
+              background-size: cover;
+              background-position: cover;
+              background-repeat: no-repeat;
+              background-color:#F8BBD0; 
+            }
+.bt2{
+
+						float:center;
+						background-color:#FF9999;
+						width:150px;
+						height:40px;
+}
+
+           
+    </style>
+ <body>
+<a href="bdd"><span style='font-size:20px; font-align:left;'>&#8592;</span></a>
+
+<header>
+     
+	<h1 style=" text-align: center;font-family: Arial, sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+            font-style: italic;
+			color:#CC3366;">Babyshower Cake Form<h1>
+               <h2><center>Customer Details</h2></center>
+</header>
+
+<form action="{% url 'orders' %}" method="POST">
+  {% csrf_token %}
+
+<p> <h3 style=" text-align:center; font-size:20px;>
+     <div> 
+     <label for="name"> Name:</label>
+     <input type="text" maxlength="32" name="f_name" pattern="[A-Za-z]{1,32}" placeholder="" required>
+       <span class="error"></span>
+
+    </div>
+   <div>
+  <label for="email">Email:</label>
+       
+  <input type="email"id="email"name="mail" placeholder=""required>
+<span class="error"></span>
+    </div>
+  <div>
+<label for="phone">Phone:</label>
+       
+
+  <input type="tel"id="phone"<input type="text" name="p_code" title="Error Message" pattern="[1-9]{1}[0-9]{9}">
+<span class="error"></span>
+    </div>
+<div>
+<label for="date">When do you need your cake?:</label>
+       <br/>
+  
+  <input class="FormDateInput" type="number" maxlength="2" name="mon" placeholder="MM"required>
+  <input class="FormDateInput" type="number" maxlength="2" name="dday" placeholder="DD"required>
+  <span class="error"></span>
+    </div>
+<div>
+<p>Tell us about your cake:</p>
+
+<div>
+ <label for="name">Which cake size would you want? </label>
+     <input type="text" name="s_size" placeholder="" required>
+  </div>
+<div>
+
+  
+  <label for="flavor">Which cake flavors would you like?</label>
+       
+ <input type="text"id="Flavour"name="t_taste" placeholder=""required>
+<span class="error"></span>
+</div>
+<div>
+
+  
+  <label for="quantity">Cake Quantity</label>
+       
+ <input type="text"id="Quantity"name="q" placeholder=""required>
+<span class="error"></span>
+</div>
+<div>
+<label for="code"rows="6"cols="10"required>Cake code:</label>
+<span class="error"></span>
+<select id="code" name="c_code">
+  <option value="201">201</option>
+  <option value="202">202</option>
+  <option value="203">203</option>
+  <option value="204">204</option>
+  <option value="205">205</option>
+  <option value="206">206</option>
+  <option value="207">207</option>
+  <option value="208">208</option>
+  <option value="209">209</option>
+  <option value="210">210</option>
+  <option value="211">211</option>
+  <option value="212">212</option>
+ 
+  <option value="101" selected>-----</option>
+</select>
+       
+ </div>
+  
+
+
+  <p>Your ideas about your cake you want?(Optional)</p>
+   <div class="option">
+    <textarea rows="10" cols="100" class="FormMessage" type="text" name="msg" placeholder="As a matter of fact...">
+     </textarea>
+  </div><br>
+<input class="bt2" type="submit"onclick="submit"style="font-size:20px"value="submit">
+
+</h3>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+<head></head>
+
+<body>
+<center>
+<h1>Report of Delicutes cakes</h1>
+<h2>Cristmas</h2>
+<table border=10>
+{%if crist %}
+<thead>
+<th>Name</th>
+<th>Email</th>
+<th>Phone no</th>
+<th>Month</th>
+<th>Date</th>
+<th>Size</th>
+<th>Flavour</th>
+<th>Code</th>
+<th>Description</th>
+</thead>
+
+{%for k in crist %}
+
+<tr>
+<td>{{k.name}}</td>
+<td>{{k.email}}</td>
+<td>{{k.phone}}</td>
+<td>{{k.month}}</td>
+<td>{{k.date}}</td>
+<td>{{k.size}}</td>
+<td>{{k.flavour}}</td>
+<td>{{k.code}}</td>
+<td>{{k.description}}</td>
+</tr>
+{%endfor%}
+{%else%}
+<h1>data not available</h1>
+</thead>
+</table>
+{%endif%}
+</center>
+</body>
+</html>

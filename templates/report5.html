@@ -1,0 +1,33 @@
+<html>
+<head></head>
+
+<body>
+<center>
+<h1>Report of Delicutes cakes</h1>
+<h2>Feedback</h2>
+<table border=10>
+{%if feedback %}
+<thead>
+<th>Rating</th>
+<th>Comments</th>
+<th>Name </th>
+<th>Email</th>
+</thead>
+
+{%for k in feedback %}
+
+<tr>
+<td>{{k.rate}}</td>
+<td>{{k.comments}}</td>
+<td>{{k.name}}</td>
+<td>{{k.email}}</td>
+</tr>
+{%endfor%}
+{%else%}
+<h1>data not available</h1>
+</thead>
+</table>
+{%endif%}
+</center>
+</body>
+</html>

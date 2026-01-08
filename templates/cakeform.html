@@ -1,0 +1,150 @@
+{% load static %}
+    
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+
+    function validateForm() {
+      var ratingOptions = document.getElementsByName('rating');
+      var selectedOption = false;
+
+      for (var i = 0; i < ratingOptions.length; i++) {
+        if (ratingOptions[i].checked) {
+          selectedOption = true;
+          break;
+        }
+      }
+
+      if (!selectedOption) {
+        alert('Please select a option');
+        return false; 
+      }
+
+      
+      return true;
+    }
+
+  </script>
+</head>
+
+<style>
+        body {
+              background-image:url("{% static 'images/image6.jpg' %}");
+              background-size: cover;
+              background-position: cover;
+              background-repeat: no-repeat;
+              background-color:#F8BBD0; 
+            }
+.bt2{
+
+						float:center;
+						background-color:#FF9999;
+						width:150px;
+						height:40px;
+}
+
+           
+    </style>
+ <body>
+<a href="wdd"><span style='font-size:20px; font-align:left;'>&#8592;</span></a>
+
+<header>
+     
+	<h1 style=" text-align: center;font-family: Arial, sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+            font-style: italic;color:#CC3366;">Wedding Cake Form<h1>
+               <h2><center>Customer Details</h2></center>
+</header>
+
+<form action="{% url 'book' %}" method="POST">
+  {% csrf_token %}
+<p> <h3 style=" text-align:center; font-size:20px;>
+     <div> 
+     <label for="name">Name:</label>
+     <input type="text" maxlength="32" name="first_name" pattern="[A-Za-z]{1,32}" placeholder="" required>
+       <span class="error"></span>
+    </div>
+   <div>
+  <label for="email">Email:</label>
+       
+  <input type="email"id="email" name="email"placeholder=""required>
+<span class="error"></span>
+    </div>
+  <div>
+<label for="phone">Phone:</label>
+       <input type="tel"id="phone"<input type="text" name="country_code" title="Error Message" pattern="[1-9]{1}[0-9]{9}">
+<span class="error"></span>
+    </div>
+<div>
+<label for="date">When do you need your cake?:</label>
+       <br/>
+  
+  <input class="FormDateInput" type="number" maxlength="2" name="month" placeholder="MM"required>
+  <input class="FormDateInput" type="number" maxlength="2" name="day" placeholder="DD"required>
+  <span class="error"></span>
+    </div>
+<div>
+<p>Tell us about your cake:</p>
+
+<div>
+ <label for="name">Which cake size would you want? </label>
+     <input type="text"name="size"  placeholder="" required>
+  </div>
+<div>
+
+  
+  <label for="flavor">Which cake flavors would you like?</label>
+       
+ <input type="text"id="Flavour"name="taste" placeholder=""required>
+<span class="error"></span>
+</div>
+<div>
+
+  
+  <label for="quantity">Cake Quantity</label>
+       
+ <input type="text"name="Quantity" placeholder=""required>
+<span class="error"></span>
+</div>
+<div>
+<label for="code"name="ccode" rows="6"cols="10"required>Cake code:</label>
+<span class="error"></span>
+<select id="code" name="ccode">
+  <option value="101">101</option>
+  <option value="102">102</option>
+  <option value="103">103</option>
+  <option value="104">104</option>
+  <option value="105">105</option>
+  <option value="106">106</option>
+  <option value="107">107</option>
+  <option value="108">108</option>
+  <option value="109">109</option>
+  <option value="110">110</option>
+  <option value="111">111</option>
+  <option value="112">112</option>
+ 
+  <option value="101" selected>-----</option>
+</select>
+       
+ </div>
+   </div>
+
+
+  
+
+
+  <p>Your ideas about your cake you want?(Optional)</p>
+   <div class="option">
+    <textarea rows="10" cols="100" class="FormMessage" type="text" name="message" placeholder="As a matter of fact...">
+     </textarea>
+  </div><br>
+<input class="bt2" type="submit"onclick="submit"style="font-size:20px" value="Submit">
+
+</h3>
+
+</form>
+</body>
+</html>

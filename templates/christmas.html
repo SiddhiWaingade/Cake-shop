@@ -1,0 +1,180 @@
+{% load static %}
+   
+<html>
+  <head>
+    <title>Pretty</title>
+  </head>
+  <style>
+* {
+			margin: 0;
+			padding: 0;
+		}
+.navbar {
+			display: flex;
+			align-items: center;
+			justify-content:left;
+			position: sticky;
+			top: 0;
+			cursor: pointer;
+		}
+
+		.background {
+			background: #A94064;
+
+			background-blend-mode: darken;
+			background-size: cover;
+		}
+
+		.nav-list {
+			width: 50%;
+			display: flex;
+			align-items:left;
+		}
+
+		
+
+		.nav-list li {
+			list-style: none;
+			padding: 26px 30px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.nav-list li a:hover {
+			color: black;
+		}
+
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+
+  .container {
+  display: grid;
+  grid-template-columns:23% 23% 23% 23%;
+div{
+        margin:100px 0px 0px 80px;
+        text-align:center;
+}
+  
+  }
+<style>
+             
+              
+
+					.img1{
+
+						float:right;
+}
+.bt1{
+
+						float:Center;
+						background-color:#FFA500;
+						width:150px;
+						height:40px;
+}
+.bt2{
+
+						float:left;
+						background-color:#F9EBEA;
+                                                border-color:#F9EBEA;
+						width:150px;
+						height:40px;
+}
+
+
+ 
+  </style>
+  <body style="background-color:#F9EBEA;" >
+<nav class="navbar background">
+
+		<ul class="nav-list">
+			
+			<li><a href="home";>HOME</a></li>
+			<li><a href="abt";>ABOUT US</a></li>
+			<li><a href="con";>CONTACT US</a></li>
+			<li><a href="fd";>FEEDBACK</a></li>
+		</ul>
+
+		
+	</nav>
+
+
+
+
+    <div class="container">
+      <div class="image"> <img src="{% static 'images/m12.jpeg' %}"; alt="This is my image." height="280px"/><BR>CHRISTMAS CAKE<BR>Cake Code:301<br>Price-600/-<br><button class="bt1" type="submit"onclick="mysql1()"style="font-size:20px">ORDER NOW</button>
+
+<script>
+                                  function mysql1(){
+                                      window.location.href="ct";
+                             }
+                                  </script>
+             
+ </div> 
+
+
+      <div class="image"> <img src="{% static 'images/m2.jpg' %}"; alt="This is my second image." height="280px"/><br>CHRISTMAS CAKE<BR>Cake Code:302<br>Price-799/-<br><button class="bt1" type="submit"onclick="mysql()"style="font-size:20px">ORDER NOW</button>
+                         <script>
+                                  function mysql(){
+                                      window.location.href="ct";
+                             }
+                          </script>
+ </div> 
+
+      <div class="image"> <img src="{% static 'images/m3.jpeg' %}"; alt="My third image." height="280px"/><BR>CHRISTMAS CAKE<BR>Cake Code:303<br>Price-800/-<br><button class="bt1" type="submit"onclick="mysql2()"style="font-size:20px">ORDER NOW</button> 
+                          <script>
+                                  function mysql2(){
+                                      window.location.href="ct";
+                             }
+                          </script>
+ </div> 
+ 
+<div class="image"> <img src="{% static 'images/m4.jpeg' %}"; alt="This is my image." height=280px"/><BR>CHRISTMAS CAKE<BR>Cake Code:304<br>Price-600/-<br><button class="bt1" type="submit"onclick="mysql3()"style="font-size:20px">ORDER NOW</button> 
+                        <script>
+                                  function mysql3(){
+                                      window.location.href="ct";
+                             }
+                        </script>
+   </div>
+
+<div class="image"> <img src="{% static 'images/m5.jpeg' %}"; alt="This is my image." height="280px"/><BR>CHRISTMAS CAKE<BR>Cake Code:305<br>Price-600/-<br><button class="bt1" type="submit"onclick="mysql4()"style="font-size:20px">ORDER NOW</button>
+                   <script>
+                                  function mysql4(){
+                                      window.location.href="ct";
+                             }
+                    </script>
+    </div>
+
+<div class="image"> <img src="{% static 'images/m6.jpeg' %}"; alt="This is my image." height="280px"/><BR>CHRISTMAS CAKE<BR>Cake Code:306<br>Price-600/-<br><button class="bt1" type="submit"onclick="mysql5()"style="font-size:20px">ORDER NOW</button> 
+                     <script>
+                                  function mysql5(){
+                                      window.location.href="ct";
+                             }
+                     </script>
+     </div>
+
+<div class="image"> <img src="{% static 'images/m7.jpeg' %}"; alt="This is my image." height="280px"/><BR>CHRISTMAS CAKE<BR>Cake Code:307<br>Price-600/-<br><button class="bt1" type="submit"onclick="mysql6()"style="font-size:20px">ORDER NOW</button>
+                        <script>
+                                  function mysql6(){
+                                      window.location.href="ct";
+                             }
+                        </script>
+      </div>
+
+<div class="image"> <img src="{% static 'images/m8.jpeg' %}"; alt="This is my image." height="280px"/><BR>CHRISTMAS CAKE<BR>Cake Code:308<br>Price-600/-<br><button class="bt1" type="submit"onclick="mysql()"style="font-size:20px">ORDER NOW</button> 
+                    <script>
+                                  function mysql(){
+                                      window.location.href="ct";
+                             }
+                      </script>
+  </div>
+
+
+   
+    </div>
+  </body>
+</html>
